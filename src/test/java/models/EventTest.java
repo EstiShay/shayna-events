@@ -18,8 +18,4 @@ public class EventTest {
         assertEquals(2225, testEvent.calculateCost());
     }
 
-
-
-
-
 }

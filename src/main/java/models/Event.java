@@ -6,12 +6,14 @@ public class Event {
     public String beverages;
     public String entertainment;
     public Integer guests;
+    public String perk;
 
     public Event(String food, String beverages, String entertainment, Integer guests) {
         this.food = food;
         this.beverages = beverages;
         this.entertainment = entertainment;
         this.guests = guests;
+        this.perk = "";
     }
 
     public int calculateCost() {
@@ -20,7 +22,7 @@ public class Event {
         Integer entTotal = 0;
         if (food.equals("Salmon BBQ")){
             foodTotal += (20 * guests);
-        } else if (food.equals("Hors D'Ouevres")){
+        } else if (food.equals("Appetizers")){
             foodTotal += (10 * guests);
         } else if (food.equals("Mediterranean Lunch")){
             foodTotal += (15 * guests);

@@ -13,9 +13,17 @@ public class EventTest {
     }
 
     @Test
-    public void calculateCost_generatesCorrectEventCost_total() throws Exception {
+    public void getFood_retrievesFoodSelection_food() throws Exception {
         Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
-        assertEquals(2225, testEvent.calculateCost());
+        assertEquals("Salmon BBQ", testEvent.getFood());
     }
+
+
+
+//    @Test
+//    public void calculateCost_generatesCorrectEventCost_total() throws Exception {
+//        Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
+//        assertEquals(2225, testEvent.calculateCost());
+//    }
 
 }

@@ -18,6 +18,11 @@ public class EventTest {
         assertEquals("Salmon BBQ", testEvent.getFood());
     }
 
+    @Test
+    public void getBeverages_retrievesBevSelection_bev() throws Exception {
+        Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
+        assertEquals("Alcohol Service", testEvent.getBeverages());
+    }
 
 
 //    @Test

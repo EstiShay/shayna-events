@@ -15,7 +15,7 @@ public class EventTest {
     @Test
     public void calculateCost_generatesCorrectEventCost_total() throws Exception {
         Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
-        assertEquals(2045, testEvent.calculateCost());
+        assertEquals(2225, testEvent.calculateCost());
     }
 
 

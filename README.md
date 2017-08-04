@@ -20,7 +20,7 @@ A command-line ordering system for an event-planning business named Shayna Event
 | ------------- | ------------- | ------------- |
 | User provides entertainment selection | DJ | Entertainment: DJ |
 | User provides food selection | Mediterranean Lunch | Food: Mediterranean Lunch |
-| User provides beverage selection | Punch | Beverages: Punch Service |
+| User provides beverage selection | Punch Service | Beverages: Punch Service |
 | User provides number of guests | 200 | For 200 people |
 | User provides coupon code | BIGPARTY | The DJ is free! |
 | User requests quote | Calculate cost | Your order of Food: Mediterranean Lunch, Beverages: Punch Service, and Entertainment: DJ for 200 people comes to $3600. |

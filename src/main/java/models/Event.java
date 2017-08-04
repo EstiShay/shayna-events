@@ -24,6 +24,10 @@ public class Event {
         return beverages;
     }
 
+    public String getEntertainment() {
+        return entertainment;
+    }
+
 //    public int calculateCost() {
 //        Integer foodTotal = 0;
 //        Integer bevTotal = 0;

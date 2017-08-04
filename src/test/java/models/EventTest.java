@@ -31,16 +31,16 @@ public class EventTest {
     }
 
     @Test
-    public void getGuests_retrievestNumGuests_num() throws Exception {
+    public void getGuests_retrievesNumGuests_num() throws Exception {
         Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
-        assertEquals(75, testEvent.getGuests());
+        assertEquals(Integer.valueOf(75), testEvent.getGuests());
     }
 
 
-//    @Test
-//    public void calculateCost_generatesCorrectEventCost_total() throws Exception {
-//        Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
-//        assertEquals(2225, testEvent.calculateCost());
-//    }
+    @Test
+    public void calculateCost_generatesCorrectEventCost_total() throws Exception {
+        Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
+        assertEquals(2225, testEvent.calculateCost());
+    }
 
 }

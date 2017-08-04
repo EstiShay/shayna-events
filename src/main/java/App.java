@@ -50,8 +50,14 @@ public class App {
 
                 Event newEvent = new Event(foodInput, beverageInput, entertainmentInput, guestInput);
 
+                String theFood = newEvent.getFood();
+                String theBevs = newEvent.getBeverages();
+                String theFun = newEvent.getEntertainment();
+                Integer theGuests = newEvent.getGuests();
 
-                System.out.println(String.format("************************************ \nYour order is: \nFood: %s \nBeverage: %s \nEntertainment: %s \nFor %d people.", newEvent.food, newEvent.beverages, newEvent.entertainment, newEvent.guests));
+
+
+                System.out.println(String.format("************************************ \nYour order is: \nFood: %s \nBeverage: %s \nEntertainment: %s \nFor %d people.", theFood, theBevs, theFun, theGuests));
 
                 System.out.println("Would you like to: \nCalculate cost or \nStart over?");
                 //Form: buttons - calculate and display or reload page
@@ -70,12 +76,12 @@ public class App {
                 if (couponYN.equals("yes")) {
                     System.out.println("Please enter your coupon code:");
                     String couponCode = bufferedReader.readLine();
-                    if (couponCode.equals("BIGPARTY") && newEvent.guests > 149) {
-                        if (newEvent.entertainment.equals("DJ")) {
+                    if (couponCode.equals("BIGPARTY") && theGuests > 149) {
+                        if (theFun.equals("DJ")) {
                             totalEventCost -= 200;
                             System.out.println(("The DJ is free!"));
                             newEvent.perk = "Free DJ with 150+ attendees.";
-                        } else if (newEvent.entertainment.equals("None")){
+                        } else if (theFun.equals("None")){
                             System.out.println("That coupon is for a DJ. Would you like to change your entertainment selection from None to DJ? yes or no");
                             String addDJYN = bufferedReader.readLine();
                             if (addDJYN.equals("yes")) {
@@ -88,14 +94,14 @@ public class App {
                                 System.out.println(("That wasn't one of the options. Let's start over."));
                                 break;
                             }
-                        } else if (newEvent.entertainment.equals("Live Band")) {
+                        } else if (theFun.equals("Live Band")) {
                             System.out.println("That coupon is for a DJ and you chose a live band. Would you like to switch to a DJ? yes or no");
                             String addDJYN = bufferedReader.readLine();
                             if (addDJYN.equals("yes")) {
                                 newEvent.entertainment = "DJ";
                                 totalEventCost -= 2000;
                             }
-                        } else if (newEvent.entertainment.equals("String Quartet")) {
+                        } else if (theFun.equals("String Quartet")) {
                             System.out.println("That coupon is for a DJ and you chose a string quartet. Would you like to switch to a DJ? yes or no");
                             String addDJYN = bufferedReader.readLine();
                             if (addDJYN.equals("yes")) {
@@ -115,9 +121,11 @@ public class App {
                     }
                 }
 
-                System.out.println(String.format("******************************************** \nThank you for choosing Shayna Events!  \nYour order of Food: %s, Beverages: %s, and Entertainment: %s for %d people comes to $%d.", newEvent.food, newEvent.beverages, newEvent.entertainment, newEvent.guests, totalEventCost));
-                if (!newEvent.perk.equals("")) {
-                    System.out.println(String.format("Coupon: %s", newEvent.perk));
+                String theCoupon = newEvent.getPerk();
+
+                System.out.println(String.format("******************************************** \nThank you for choosing Shayna Events!  \nYour order of Food: %s, Beverages: %s, and Entertainment: %s for %d people comes to $%d.", theFood, theBevs, theFun, theGuests, totalEventCost));
+                if (!theCoupon.equals("")) {
+                    System.out.println(String.format("Coupon: %s", theCoupon));
                 }
                 runProgram = false;
             } catch (IOException e) {

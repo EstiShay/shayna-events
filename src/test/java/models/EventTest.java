@@ -25,9 +25,15 @@ public class EventTest {
     }
 
     @Test
-    public void getEntertainment_retrievesEntSelection_Ent() throws Exception {
+    public void getEntertainment_retrievesEntSelection_ent() throws Exception {
         Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
         assertEquals("DJ", testEvent.getEntertainment());
+    }
+
+    @Test
+    public void getGuests_retrievestNumGuests_num() throws Exception {
+        Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
+        assertEquals(75, testEvent.getGuests());
     }
 
 

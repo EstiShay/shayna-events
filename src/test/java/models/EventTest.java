@@ -24,6 +24,12 @@ public class EventTest {
         assertEquals("Alcohol Service", testEvent.getBeverages());
     }
 
+    @Test
+    public void getEntertainment_retrievesEntSelection_Ent() throws Exception {
+        Event testEvent = new Event("Salmon BBQ", "Alcohol Service", "DJ", 75);
+        assertEquals("DJ", testEvent.getEntertainment());
+    }
+
 
 //    @Test
 //    public void calculateCost_generatesCorrectEventCost_total() throws Exception {

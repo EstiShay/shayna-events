@@ -20,6 +20,10 @@ public class Event {
         return food;
     }
 
+    public String getBeverages() {
+        return beverages;
+    }
+
 //    public int calculateCost() {
 //        Integer foodTotal = 0;
 //        Integer bevTotal = 0;

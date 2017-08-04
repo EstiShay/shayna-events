@@ -8,9 +8,11 @@ public class EventTest {
 
     @Test
     public void Event_instantiatesCorrectly() throws Exception {
-        Event testEvent = new Event("appetizers", "simple", "dj");
+        Event testEvent = new Event("appetizers", "simple", "dj", 20);
         assertEquals(true, testEvent instanceof Event);
     }
+
+
 
 
 
